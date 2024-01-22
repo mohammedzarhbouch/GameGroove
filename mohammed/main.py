@@ -1,6 +1,14 @@
 import tkinter
 from tkinter import PhotoImage
 from PIL import Image, ImageTk
+from sys import exit
+
+
+def startClick():
+    exit
+
+
+
 
 window = tkinter.Tk()
 
@@ -14,8 +22,12 @@ try:
     # Open the image using Pillow
     originalImage = Image.open(imagePath)
 
-    # Resize the image using Pillow
-    resizedImage = originalImage.resize((1920, 1080))  # Specify the desired size
+     # Get the screen width and height
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+
+    # Resize the image to the screen size
+    resizedImage = originalImage.resize((screen_width, screen_height))
 
     # Convert the Pillow image to a Tkinter-compatible format
     tkImage = ImageTk.PhotoImage(resizedImage)
@@ -27,6 +39,13 @@ try:
 except Exception as e:
     # Print the exception to understand the issue
     print(f"Error loading/resizing image: {e}")
+
+
+startButton = tkinter.Button(window, text="Start!", bg="lightblue", fg="white", font=("Arial", 20), padx=30, pady=2, command=lambda: print("Start button clicked!"))
+startButton.place(relx=0.5, rely=0.6, anchor="center") 
+
+quitButton = tkinter.Button(window, text="Quit", command=exit, bg="red", fg="white", font=("Arial", 16), padx=15, pady=2)
+quitButton.place(relx=0.5, rely=0.65, anchor="center")
 
 
 
