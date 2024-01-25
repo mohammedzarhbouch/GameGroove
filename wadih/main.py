@@ -4,7 +4,7 @@ from tkinter import Tk, Frame, Button
 
 window = Tk()
 window.title('Tic Tac Toe')
-
+window.attributes("-fullscreen", True)
 window.geometry("1200x710")
 window.config(background="#12BDAC")
 
@@ -197,17 +197,28 @@ def reset():
     b9= Button(window, text=" ", font=("Comic Sans MS", 30), height=2, width=6, bg="#12BDAC", command=lambda: b_click(b9))
 
 
-    b1.grid(row=0, column=0)
-    b2.grid(row=0, column=1)
-    b3.grid(row=0, column=2)
+    b1.place(relx=0.4, rely=0.33, anchor="center")
+    b2.place(relx=0.5, rely=0.33, anchor="center")
+    b3.place(relx=0.6, rely=0.33, anchor="center")
 
-    b4.grid(row=1, column=0)
-    b5.grid(row=1, column=1)
-    b6.grid(row=1, column=2)
+    b4.place(relx=0.4, rely=0.5, anchor="center")
+    b5.place(relx=0.5, rely=0.5, anchor="center")
+    b6.place(relx=0.6, rely=0.5, anchor="center")
 
-    b7.grid(row=2, column=0)
-    b8.grid(row=2, column=1)
-    b9.grid(row=2, column=2)
+    b7.place(relx=0.4, rely=0.67, anchor="center")
+    b8.place(relx=0.5, rely=0.67, anchor="center")
+    b9.place(relx=0.6, rely=0.67, anchor="center")
+
+    buttonQuit = Button(
+        window,
+        text="Quit",
+        bg="red",
+        font=("Helvetica", 18),
+        command=exit,
+        width=12 )
+    
+    buttonQuit.place(relx= 0.44, rely= 0.8)
+
 
 
 my_menu = Menu(window)
