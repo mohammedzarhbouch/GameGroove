@@ -69,7 +69,7 @@ def countdown_label():
         window.after(1000, countdown_label)
         countdown.set(countdown.get() - 1)
     else:
-        label_timer.config(text="Time: 0.00 seconds")
+        label_timer.config(text="Time: 0.00 seconds") 
 
 button_radius = 20
 
