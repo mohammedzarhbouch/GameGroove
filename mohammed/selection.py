@@ -25,7 +25,16 @@ backgroundLabel.place(relwidth="1", relheight="1")
 
 
 
-miniGame1 = tkinter.Button(window,text="test" )
-miniGame1.place(rely= 0.5, relx=0.5)
+miniGame1 = tkinter.Button(window,text="1" )
+miniGame1.place(rely= 0.4, relx=0.4)
+
+miniGame2 = tkinter.Button(window,text="2" )
+miniGame2.place(rely= 0.6, relx=0.6)
+
+miniGame3 = tkinter.Button(window,text="3" )
+miniGame3.place(rely= 0.4, relx=0.6)
+
+miniGame4 = tkinter.Button(window,text="4" )
+miniGame4.place(rely= 0.6, relx=0.4)
 
 window.mainloop()
