@@ -12,7 +12,7 @@ def createMainWindow():
 def startMain():
     window = createMainWindow()
 
-    imagePath = "img/plz.png"
+    imagePath = "plz.png"
 
     try:
         # Open the image using Pillow
