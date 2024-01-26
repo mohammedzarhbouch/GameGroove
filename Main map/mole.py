@@ -5,11 +5,9 @@ import random
 import tkinter
 from PIL import Image, ImageTk
 
-def onStartButtonClick(mainWindow):
-    
-    mainWindow.destroy()  # Close the main window created by main.py
-    startMole()  # Start the new window with buttons
-
+def onSelectionButtonClick4(selectionWindow):
+    selectionWindow.destroy()
+    startMole()
 
 def startMole():
     try:

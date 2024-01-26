@@ -1,16 +1,12 @@
 
 import tkinter 
 from PIL import Image, ImageTk
-from mole import onStartButtonClick
+from selection import onStartButtonClick
 
-def createMainWindow():
-    window = tkinter.Tk()
-    window.attributes("-fullscreen", True)
-   
-    return window
 
 def startMain():
-    window = createMainWindow()
+    window = tkinter.Tk()
+    window.attributes("-fullscreen", True)
 
     imagePath = "img/plz.png"
 
