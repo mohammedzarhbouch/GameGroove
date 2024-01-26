@@ -3,7 +3,6 @@ import tkinter
 from PIL import Image, ImageTk
 from selection import onStartButtonClick
 
-
 def startMain():
     window = tkinter.Tk()
     window.attributes("-fullscreen", True)
