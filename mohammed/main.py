@@ -1,8 +1,7 @@
-# main.py
 
 import tkinter 
 from PIL import Image, ImageTk
-from test import onStartButtonClick
+from mole import onStartButtonClick
 
 def createMainWindow():
     window = tkinter.Tk()
